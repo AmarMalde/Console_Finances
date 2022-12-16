@@ -101,3 +101,26 @@ var decreasedProfit = 0;
 var decreasedProfitMonth = "";
 
 
+for (var i = 0; i < finances.length; i++) {
+    total = total + finances[i][1];
+
+    if (i < finances.length-1) {
+        //storing the current month's profit or loss in the change variable
+        change = finances[i+1][1] - finances[i][1]
+        //and adding that to AvgChange to eventually calculate the average profit/ loss
+        AvgChange = AvgChange + change;
+
+        if (change > increaseProfit) {
+            //whenever the change is larger than the value in increaseProfit, update variables with value
+            increaseProfit = change
+            increaseProfitMonth = finances[i+1][0]
+        }
+
+        if (change < decreasedProfit) {
+            //whenever the change is larger than the value in increaseProfit, update variables with value
+            decreasedProfit = change
+            decreasedProfitMonth = finances[i+1][0]
+        }
+
+    }
+}
