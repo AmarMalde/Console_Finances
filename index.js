@@ -125,11 +125,14 @@ for (var i = 0; i < finances.length; i++) {
     }
 }
 
+//caulcating average change after adding vales in the for loop. Also setting it to 2d.p.
+AvgChange = (AvgChange / (finances.length-1)).toFixed(2)
+
 //logging results to console as per instructions
 console.log(`Financial Analysis`);
 console.log(`----------------------------`);
 console.log(`Total Months: ${finances.length}`);
 console.log(`Total: $${total}`);
-console.log(`Average  Change: \$${(AvgChange / finances.length).toFixed(2)}`);
+console.log(`Average  Change: \$${AvgChange}`);
 console.log(`Greatest Increase in Profits: ${increaseProfitMonth} (\$${increaseProfit})`);
 console.log(`Greatest Decrease in Profits: ${decreasedProfitMonth} (\$${decreasedProfit})`);
