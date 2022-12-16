@@ -124,3 +124,12 @@ for (var i = 0; i < finances.length; i++) {
 
     }
 }
+
+//logging results to console as per instructions
+console.log(`Financial Analysis`);
+console.log(`----------------------------`);
+console.log(`Total Months: ${finances.length}`);
+console.log(`Total: $${total}`);
+console.log(`Average  Change: \$${(AvgChange / finances.length).toFixed(2)}`);
+console.log(`Greatest Increase in Profits: ${increaseProfitMonth} (\$${increaseProfit})`);
+console.log(`Greatest Decrease in Profits: ${decreasedProfitMonth} (\$${decreasedProfit})`);
