@@ -88,3 +88,16 @@ var finances = [
     ];
 
     
+
+var total = 0; //Each value in the finances array to this varable to get the total
+var change = 0;
+var AvgChange = 0;//Each change between months is added to this variable and then divided by no. of months
+
+// Variables below is used to store the largest difference (or month of the largest difference) 
+// at the current iteration of the for loop. It's updated as the loop loops
+var increaseProfit = 0;
+var increaseProfitMonth = "";
+var decreasedProfit = 0;
+var decreasedProfitMonth = "";
+
+
